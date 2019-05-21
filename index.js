@@ -9,3 +9,7 @@ function driversByRevenue (drivers) {
   newDrivers = drivers.slice();
   return newDrivers.sort(function (a,b) {return a.revenue - b.revenue;});
 }
+function driversByName (drivers) {
+  newDrivers = drivers.slice();
+  return newDrivers.sort(function (a,b) {return a.localeCompare(b);});
+}
