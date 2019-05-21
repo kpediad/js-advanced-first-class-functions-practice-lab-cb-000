@@ -5,3 +5,7 @@ function logDriverNames(drivers) {
 function logDriversByHometown (drivers, location) {
   drivers.forEach(function (driver) {if (driver.hometown === location) {console.log(driver.name);}});
 }
+function driversByRevenue (drivers) {
+  newDrivers = Object.assign({}, drivers);
+  return newDrivers.sort(function (a,b) {return a.revenue - b.revenue;});
+}
