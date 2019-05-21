@@ -13,3 +13,6 @@ function driversByName (drivers) {
   newDrivers = drivers.slice();
   return newDrivers.sort(function (a,b) {return a.name.localeCompare(b.name);});
 }
+function totalRevenue (drivers) {
+  return drivers.reduce(function (total, el, i, arr) {return total + el.revenue;});
+}
